@@ -6,7 +6,8 @@ Bring your character to the water to proceed to the next level. Each additional 
 
 ## Get Started
 1. Clone this repo
-2. Open the index.html file
+2. Open the index.html file 
+3. Or [view live](fascinated-beginner.surge.sh)
 
 ## Controls
 
@@ -14,8 +15,3 @@ Bring your character to the water to proceed to the next level. Each additional 
 * 'down' arrow - Moves character down one space.
 * 'left' arrow - Moves character left one space.
 * 'right' arrow - Moves character right one space.
-
-## Features
-
--Each additional bug is placed on a random row, at a random position.  
--Each additional bug is given a random speed.
