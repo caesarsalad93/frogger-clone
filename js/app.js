@@ -47,7 +47,7 @@ Enemy.prototype.checkCollisions = function() {
 
 var Player = function() {
     this.startPosition();
-    this.sprite = 'images/char-boy.png';
+    this.sprite = chosenCharacter || 'images/selector.png';
 };
 
 Player.prototype.startPosition = function() {
@@ -97,4 +97,22 @@ document.addEventListener('keyup', function(e) {
     };
 
     player.handleInput(allowedKeys[e.keyCode]);
+});
+// This function hides the select screen after a character has been chosen.
+function hideSelect() {
+  document.getElementById('select').style.visibility = 'hidden';
+}
+/*
+The collection of characters is extracted from the DOM into an array using Array.prototype.slice.
+Each character has an event listener added to it, which will change the player sprite to the clicked on character.
+*/
+var characters = Array.prototype.slice.call( document.getElementById('characters').children );
+var chosenCharacter = characters[0].attributes.src.value;
+characters.forEach(function(character) {
+    character.addEventListener('click', function() {
+      chosenCharacter = character.attributes.src.value;
+      player = new Player();
+      player.render();
+      hideSelect();
+  });
 });
