@@ -7,7 +7,7 @@ Bring your character to the water to proceed to the next level. Each additional 
 ## Get Started
 1. Clone this repo
 2. Open the index.html file 
-3. Or [view live](https://fascinated-beginner.surge.sh/)
+3. Or [view live](https://frogger-clone.surge.sh/)
 
 ## Controls
 
