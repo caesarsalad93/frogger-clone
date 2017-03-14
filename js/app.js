@@ -7,7 +7,6 @@ var Enemy = function() {
     this.x = randomColumn;
     this.y = randomRow;
     this.randomSpeed = randomSpeed;
-
     this.sprite = 'images/enemy-bug.png';
 };
 
@@ -17,9 +16,9 @@ Enemy.prototype.update = function(dt) {
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
-
+    
     this.x += dt * this.randomSpeed;
-
+    
     //if bug reaches the end of the canvas, have it loop back around.
     if (this.x >= 505) {
         this.x = -120;
@@ -58,7 +57,7 @@ Player.prototype.startPosition = function() {
 
 Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-
+    
     //If player reaches the water, reset his position to start, and add a bug.
     if (this.y === -40) {
         this.startPosition();
